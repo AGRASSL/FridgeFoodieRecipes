@@ -1,0 +1,19 @@
+aside {
+    position: fixed;
+}
+
+.bg-dark {
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    height: 100px;
+}
+
+#pure-img-responsive{
+    width: 100vh;
+}
+
+.form-group {
+    display: grid;
+    background-color: grey;
+}

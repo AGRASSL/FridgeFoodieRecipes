@@ -22,6 +22,9 @@
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/grids-responsive-min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&display=swap" rel="stylesheet">
+        
         <link rel="stylesheet" href="style.css">
         <title>Title Here!</title>
         <meta name="description" content="">
@@ -29,56 +32,65 @@
         
     </head>
     <body class="container-fluid">
+        
         <header>
             <h1 class="bg-dark text-white">Placeholder Page Title!</h1>
         </header>
-       <aside class="row container-fluid">
+       <!-- <aside class="row container-fluid"> -->
            <!-- https://unsplash.com/photos/6MT4_Ut8a3Y?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink -->
-            <img src="./assets/jeff-sheldon-6MT4_Ut8a3Y-unsplash.jpg" alt="iPad showing recipe in kitchen" id="pure-img-responsive">
+            <!-- <img src="./assets/jeff-sheldon-6MT4_Ut8a3Y-unsplash.jpg" alt="iPad showing recipe in kitchen" id="pure-img-responsive">
 
-       </aside> 
-        <div class="">
-        
+       </aside>  -->
+        <div class="conatiner">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 image1">
+                    <img src="./assets/jeff-sheldon-6MT4_Ut8a3Y-unsplash.jpg" alt="iPad showing recipe in kitchen" id="pure-img-responsive">
+                    <!-- <div></div>
+                    <div></div>
+                    <div></div> -->
+                </div>
+                <div class="col-sm-12 col-md-6 welcomeContent">
+                    <h2>Welcome!</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus optio eligendi, id nemo rem vitae placeat fugit? Veniam et placeat aperiam sapiente animi. Corrupti, quasi accusamus quia explicabo laudantium velit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus optio eligendi, id nemo rem vitae placeat fugit? Veniam et placeat aperiam sapiente animi. Corrupti, quasi accusamus quia explicabo laudantium velit.</p>
+                    <p>Thanks for visiting us! We hope you enjoy</p>
+                    <div class="personalImages">
+                        <img src="assets/natalie.png" class="avatar" atl="natalie headshot">
+                        <img src="assets/LO.png" class="avatar" atl="laura headshot">
+                        <img src="assets/Alex.png" class="avatar" atl="Alex headshot">
+                    </div>
+                    <br>
+                    <br>
+                    <button type="button" data-toggle="modal" data-target=".bd-example-modal-lg" class="btn btn-dark btn-lg getStarted">Click Here to Get Started!</button>
+                </div>
+<!-- MODAL -->
+<div class="modal fade bd-example-modal-lg" id="recipeInputs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-
-
-       
-       <form class="form-group w-50">
-         <div class="row mb 3">
-            
-                <div class="col-sm-10">
-                    <input class="form-check-input" type="radio" name="formRadios" id="radioOption1" value="option1">
-                    <label class="form-check-labl" for="option1">Vegetarian</label>
-                </div>  
-                <div class="col-sm-10">
-                    <input class="form-check-input" type="radio" name="formRadios" id="radioOption2" value="option2">
-                    <label class="form-check-labl" for="option2">Pescatarian</label>
-                </div>
-                <div class="col-sm-10">
-                    <input class="form-check-input" type="radio" name="formRadios" id="radioOption3" value="option3">
-                    <label class="form-check-labl" for="option3">Vegan</label>
-                </div>
-                <div class="col-sm-10">
-                    <input class="form-check-input" type="radio" name="formRadios" id="radioOption4" value="option4">
-                    <label class="form-check-labl" for="option4">Keto</label>
-                </div>
-                <div class="col-sm-10">
-                    <input class="form-check-input" type="radio" name="formRadios" id="radioOption5" value="option5">
-                    <label class="form-check-labl" for="option5">Dairy Free</label>
-                </div>
-                <div class="col-sm-10">
-                    <input class="form-check-input" type="radio" name="formRadios" id="radioOption6" value="option6">
-                    <label class="form-check-labl" for="option6">Gluten Free</label>
-                </div>
-            
+        <form id="recipeForm">
+            <div class="modal-body">
+              <div class="form-group">
+                <input class="form-check-input" type="radio" name="formRadios" id="radioOption1" value="option1">
+                <label class="form-check-labl" for="option1">Vegetarian</label>
+                <input class="form-check-input" type="radio" name="formRadios" id="radioOption2" value="option2">
+                <label class="form-check-labl" for="option2">Pescatarian</label>
+              </div>
+            </div>
+        </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
-
-
-       </form>
-
-        
-
-
+      </div>
+    </div>
+  </div>
+  
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

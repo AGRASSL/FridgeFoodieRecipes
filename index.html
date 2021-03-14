@@ -4,11 +4,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link
-        rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+        
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
         <link
         rel="stylesheet"
         href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
@@ -22,6 +19,9 @@
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/grids-responsive-min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&display=swap" rel="stylesheet">
+        
         <link rel="stylesheet" href="style.css">
         <title>Title Here!</title>
         <meta name="description" content="">
@@ -29,59 +29,105 @@
         
     </head>
     <body class="container-fluid">
+        
         <header>
             <h1 class="bg-dark text-white">Placeholder Page Title!</h1>
         </header>
-       <aside class="row container-fluid">
+       <!-- <aside class="row container-fluid"> -->
            <!-- https://unsplash.com/photos/6MT4_Ut8a3Y?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink -->
-            <img src="./assets/jeff-sheldon-6MT4_Ut8a3Y-unsplash.jpg" alt="iPad showing recipe in kitchen" id="pure-img-responsive">
+            <!-- <img src="./assets/jeff-sheldon-6MT4_Ut8a3Y-unsplash.jpg" alt="iPad showing recipe in kitchen" id="pure-img-responsive">
 
-       </aside> 
-        <div class="">
-        
+       </aside>  -->
+        <div class="conatiner">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 image1">
+                    <img src="./assets/jeff-sheldon-6MT4_Ut8a3Y-unsplash.jpg" alt="iPad showing recipe in kitchen" id="pure-img-responsive">
+                    <!-- <div></div>
+                    <div></div>
+                    <div></div> -->
+                </div>
+                <div class="col-sm-12 col-md-6 welcomeContent">
+                    <h2>Welcome!</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus optio eligendi, id nemo rem vitae placeat fugit? Veniam et placeat aperiam sapiente animi. Corrupti, quasi accusamus quia explicabo laudantium velit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus optio eligendi, id nemo rem vitae placeat fugit? Veniam et placeat aperiam sapiente animi. Corrupti, quasi accusamus quia explicabo laudantium velit.</p>
+                    <p>Thanks for visiting us! We hope you enjoy</p>
+                    <div class="personalImages">
+                        <img src="assets/natalie.png" class="avatar" atl="natalie headshot">
+                        <img src="assets/LO.png" class="avatar" atl="laura headshot">
+                        <img src="assets/Alex.png" class="avatar" atl="Alex headshot">
+                    </div>
+                    <br>
+                    <br>
+                    <button type="button" data-toggle="modal" data-target=".userInputs" class="btn btn-dark btn-lg getStarted">Click Here to Get Started!</button>
+                </div>
+<!-- MODAL -->
+<div class="modal fade userInputs" id="recipeInputs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Let's Get Cooking!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+        <form id="recipeForm">
+            <div class="modal-body container">
+              <div class="row form-check">
+                <div class="col-6">   
+                  <input class="form-check-input" type="radio" name="Vegetarian" id="Vegetarian" value="Vegetarian">
+                  <label class="form-check-label" for="Vegetarian">Vegetarian</label>
+                  <br>
+                  <input class="form-check-input" type="radio" name="Pescatarian" id="Pescatarian" value="Pescatarian">
+                  <label class="form-check-label" for="Pescatarian">Pescatarian</label>
+                  <br>
+                  <input class="form-check-input" type="radio" name="Keto" id="Keto" value="keto">
+                  <label class="form-check-label" for="keto">Keto</label>
+                </div> 
+                <div class="col-6">
+                  <input class="form-check-input" type="radio" name="glutenFree" id="glutenFree" value="glutenFree">
+                  <label class="form-check-label" for="glutenFree">Gluten Free</label>
+                  <br>
+                  <input class="form-check-input" type="radio" name="dairyFree" id="dairyFree" value="dairyFree">
+                  <label class="form-check-label" for="dairyFree">Dairy Free</label>
+                  <br>
+                  <input class="form-check-input" type="radio" name="Vegan" id="vegan" value="vegan">
+                  <label class="form-check-label" for="Vegan">Vegan</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Item 1</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient" max="15" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Item 2</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient" max="15" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Item 3</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient" max="15" aria-describedby="inputGroup-sizing-default">
+                </div>
+                
+              </div>  
 
 
-       
-       <form class="form-group w-50">
-         <div class="row mb 3">
-            
-                <div class="col-sm-10">
-                    <input class="form-check-input" type="radio" name="formRadios" id="radioOption1" value="option1">
-                    <label class="form-check-labl" for="option1">Vegetarian</label>
-                </div>  
-                <div class="col-sm-10">
-                    <input class="form-check-input" type="radio" name="formRadios" id="radioOption2" value="option2">
-                    <label class="form-check-labl" for="option2">Pescatarian</label>
-                </div>
-                <div class="col-sm-10">
-                    <input class="form-check-input" type="radio" name="formRadios" id="radioOption3" value="option3">
-                    <label class="form-check-labl" for="option3">Vegan</label>
-                </div>
-                <div class="col-sm-10">
-                    <input class="form-check-input" type="radio" name="formRadios" id="radioOption4" value="option4">
-                    <label class="form-check-labl" for="option4">Keto</label>
-                </div>
-                <div class="col-sm-10">
-                    <input class="form-check-input" type="radio" name="formRadios" id="radioOption5" value="option5">
-                    <label class="form-check-labl" for="option5">Dairy Free</label>
-                </div>
-                <div class="col-sm-10">
-                    <input class="form-check-input" type="radio" name="formRadios" id="radioOption6" value="option6">
-                    <label class="form-check-labl" for="option6">Gluten Free</label>
-                </div>
-            
+            </div>
+        </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <input type="submit" class="btn btn-dark" value="Get Recipes!">
         </div>
-
-
-       </form>
-
-        
-
-
+      </div>
+    </div>
+  </div>
+  
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
         <script src="" async defer></script>
     </body>

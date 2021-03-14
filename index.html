@@ -4,11 +4,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link
-        rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+        
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
         <link
         rel="stylesheet"
         href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
@@ -61,31 +58,64 @@
                     </div>
                     <br>
                     <br>
-                    <button type="button" data-toggle="modal" data-target=".bd-example-modal-lg" class="btn btn-dark btn-lg getStarted">Click Here to Get Started!</button>
+                    <button type="button" data-toggle="modal" data-target=".userInputs" class="btn btn-dark btn-lg getStarted">Click Here to Get Started!</button>
                 </div>
 <!-- MODAL -->
-<div class="modal fade bd-example-modal-lg" id="recipeInputs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
+<div class="modal fade userInputs" id="recipeInputs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Let's Get Cooking!</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <form id="recipeForm">
-            <div class="modal-body">
-              <div class="form-group">
-                <input class="form-check-input" type="radio" name="formRadios" id="radioOption1" value="option1">
-                <label class="form-check-labl" for="option1">Vegetarian</label>
-                <input class="form-check-input" type="radio" name="formRadios" id="radioOption2" value="option2">
-                <label class="form-check-labl" for="option2">Pescatarian</label>
+            <div class="modal-body container">
+              <div class="row form-check">
+                <div class="col-6">   
+                  <input class="form-check-input" type="radio" name="Vegetarian" id="Vegetarian" value="Vegetarian">
+                  <label class="form-check-label" for="Vegetarian">Vegetarian</label>
+                  <br>
+                  <input class="form-check-input" type="radio" name="Pescatarian" id="Pescatarian" value="Pescatarian">
+                  <label class="form-check-label" for="Pescatarian">Pescatarian</label>
+                  <br>
+                  <input class="form-check-input" type="radio" name="Keto" id="Keto" value="keto">
+                  <label class="form-check-label" for="keto">Keto</label>
+                </div> 
+                <div class="col-6">
+                  <input class="form-check-input" type="radio" name="glutenFree" id="glutenFree" value="glutenFree">
+                  <label class="form-check-label" for="glutenFree">Gluten Free</label>
+                  <br>
+                  <input class="form-check-input" type="radio" name="dairyFree" id="dairyFree" value="dairyFree">
+                  <label class="form-check-label" for="dairyFree">Dairy Free</label>
+                  <br>
+                  <input class="form-check-input" type="radio" name="Vegan" id="vegan" value="vegan">
+                  <label class="form-check-label" for="Vegan">Vegan</label>
+                </div>
               </div>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Item 1</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient" max="15" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Item 2</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient" max="15" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Item 3</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient" max="15" aria-describedby="inputGroup-sizing-default">
+                </div>
+                
+              </div>  
+
+
             </div>
         </form>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <input type="submit" class="btn btn-dark" value="Get Recipes!">
         </div>
       </div>
     </div>
@@ -94,6 +124,10 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
         <script src="" async defer></script>
     </body>

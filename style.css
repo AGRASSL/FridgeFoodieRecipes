@@ -13,9 +13,23 @@
     
 }
 
+.footer {
+    background-color: #283c63;
+}
+
+.modal-header, .modal-footer {
+  background-color: #928a97;
+  color:white;
+  font-weight: 2px;
+}
+
+
+.form-check{
+    line-height: 1.5;
+}
+
 .form-group {
-    display: grid;
-    background-color: grey;
+    margin-top: 20px;
 }
 
 h2 {
@@ -46,6 +60,6 @@ h2 {
     margin:60px;
     padding:15px;
     border-radius: 10px;
-    margin-left: 170px;
+    margin-left: 225px;
     margin-top:100px;
 }

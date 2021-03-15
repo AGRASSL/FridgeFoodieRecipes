@@ -4,7 +4,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link
         rel="stylesheet"
@@ -28,36 +30,32 @@
     <body class="container-fluid"> 
         <header>
             <h1 class="bg-dark text-white">Placeholder Title!</h1>
+            <div class="headerImage"></div>
         </header>
-       
-<div class="card mb-3">
-    <div class="row">
+    <div class="row sideCar animate__animated animate__fadeInUp">
       <div class="col-sm-12 col-md-3 col-lg-3"> 
-          <!-- https://unsplash.com/photos/0YhPwFgIz9E?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink -->
-              <img src="assets/annemarie-gruden-0YhPwFgIz9E-unsplash.jpg" class="card-img-top" alt="...">  
-         <div class="card-body">
-              <h4 class="card-title">Search New Selections</h4>
+              <h4 class="card-title">Search New Selections:</h4>
             <div class="form-group">
                   <div class="input-group mb-3">
-                    <span class="input-group-text" id="inputGroup-sizing-default">Item 1</span>
+                    <span class="input-group-text itemLabels" id="item1">Item 1</span>
                     <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient" maxlength="15" aria-describedby="inputGroup-sizing-default">
                   </div>
                   <div class="input-group mb-3">
-                    <span class="input-group-text" id="inputGroup-sizing-default">Item 2</span>
+                    <span class="input-group-text itemLabels" id="=item2">Item 2</span>
                     <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient" maxlength="15" aria-describedby="inputGroup-sizing-default">
                   </div>
                   <div class="input-group mb-3">
-                    <span class="input-group-text" id="inputGroup-sizing-default">Item 3</span>
+                    <span class="input-group-text itemLabels" id="item3">Item 3</span>
                     <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient" maxlength="15" aria-describedby="inputGroup-sizing-default">
                   </div>
                   <div class="radioBtns">
-                  <input class="form-check-input" type="radio" name="Vegetarian" id="Vegetarian" value="Vegetarian">
-                  <label class="form-check-label" for="Vegetarian">Vegetarian</label>
+                  <input class="form-check-input" type="radio" name="vegetarian" id="vegetarian" value="vegetarian">
+                  <label class="form-check-label" for="vegetarian">Vegetarian</label>
                     <br>
-                  <input class="form-check-input" type="radio" name="Pescatarian" id="Pescatarian" value="Pescatarian">
-                  <label class="form-check-label" for="Pescatarian">Pescatarian</label>
+                  <input class="form-check-input" type="radio" name="pescatarian" id="pescatarian" value="pescatarian">
+                  <label class="form-check-label" for="pescatarian">Pescatarian</label>
                     <br>
-                  <input class="form-check-input" type="radio" name="Keto" id="Keto" value="keto">
+                  <input class="form-check-input" type="radio" name="keto" id="keto" value="keto">
                   <label class="form-check-label" for="keto">Keto</label>
                     <br>
                   <input class="form-check-input" type="radio" name="glutenFree" id="glutenFree" value="glutenFree">
@@ -66,18 +64,18 @@
                   <input class="form-check-input" type="radio" name="dairyFree" id="dairyFree" value="dairyFree">
                   <label class="form-check-label" for="dairyFree">Dairy Free</label>
                     <br>
-                  <input class="form-check-input" type="radio" name="Vegan" id="vegan" value="vegan">
-                  <label class="form-check-label" for="Vegan">Vegan</label>
+                  <input class="form-check-input" type="radio" name="vegan" id="vegan" value="vegan">
+                  <label class="form-check-label" for="vegan">Vegan</label>
                   </div>
                   <div class="resultsPageBtns">
                     <button type="button" class="btn btn-dark">Go Back</button>
                     <input type="submit" class="btn btn-dark secondRecipeBtn" value="View Recipes">
                   </div> 
               </div>
-           </div> 
+           
         </div>
-    </div>
-</div>             
+    </div> 
+            
 
 
 

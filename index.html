@@ -4,8 +4,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link
         rel="stylesheet"
         href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
@@ -16,49 +19,82 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
         crossorigin="anonymous"
       />
-        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/grids-responsive-min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&display=swap" rel="stylesheet">
         
         <link rel="stylesheet" href="style.css">
         <title>Title Here!</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
         
     </head>
-    <body class="container-fluid">
-        
+    <body class="">
         <header>
-            <h1 class="bg-dark text-white">Placeholder Page Title!</h1>
+            <h1 class="bg-dark text-white">Placeholder Title!</h1>
         </header>
-       <!-- <aside class="row container-fluid"> -->
-           <!-- https://unsplash.com/photos/6MT4_Ut8a3Y?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink -->
-            <!-- <img src="./assets/jeff-sheldon-6MT4_Ut8a3Y-unsplash.jpg" alt="iPad showing recipe in kitchen" id="pure-img-responsive">
-
-       </aside>  -->
-        <div class="conatiner">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12 col-md-6 image1">
-                    <img src="./assets/jeff-sheldon-6MT4_Ut8a3Y-unsplash.jpg" alt="iPad showing recipe in kitchen" id="pure-img-responsive">
-                    <!-- <div></div>
-                    <div></div>
-                    <div></div> -->
+                    <img src="./assets/jeff-sheldon-6MT4_Ut8a3Y-unsplash.jpg" alt="iPad showing recipe in kitchen" class="img-fluid" alt="Responsive image">
                 </div>
                 <div class="col-sm-12 col-md-6 welcomeContent">
-                    <h2>Welcome!</h2>
+                    <h2 class="animate__animated animate__fadeInDown">Welcome!</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus optio eligendi, id nemo rem vitae placeat fugit? Veniam et placeat aperiam sapiente animi. Corrupti, quasi accusamus quia explicabo laudantium velit.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus optio eligendi, id nemo rem vitae placeat fugit? Veniam et placeat aperiam sapiente animi. Corrupti, quasi accusamus quia explicabo laudantium velit.</p>
                     <p>Thanks for visiting us! We hope you enjoy</p>
-                    <div class="personalImages">
+                    <div class="personalImages animate__animated animate__slideInRight">
                         <img src="assets/natalie.png" class="avatar" atl="natalie headshot">
                         <img src="assets/LO.png" class="avatar" atl="laura headshot">
                         <img src="assets/Alex.png" class="avatar" atl="Alex headshot">
                     </div>
-                    <br>
-                    <br>
-                    <button type="button" data-toggle="modal" data-target=".userInputs" class="btn btn-dark btn-lg getStarted">Click Here to Get Started!</button>
+                    <div class="text-center">
+                      <button type="button" data-toggle="modal" data-target=".userInputs" class="btn btn-dark btn-lg getStarted">Click Here to Get Started!</button>
+                   </div>
+                   <!-- CAROUSEL -->
+                   <div id="slider" class="carousel slide text-center" data-bs-ride="carousel">
+                    <div class="carousel-indicators rounded">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <!-- https://unsplash.com/photos/iVC56eIVq-c?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink -->
+                        <img src="assets/micheile-henderson-iVC56eIVq-c-unsplash.jpg" class="d-block w-100" alt="aerial view of someone cooking">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h3>Cooking at home reduces calorie consumption</h3>
+                          <p><i>- visitcost.com</i></p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <!-- https://unsplash.com/photos/H5NxzRv70MM?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink -->
+                        <img src="assets/markus-winkler-H5NxzRv70MM-unsplash.jpg" class="d-block w-100" alt="blank recipe page">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h3>Cooking at home reduces calorie consumption</h3>
+                          <p><i>- visitcost.com</i></p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="..." class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Third slide label</h5>
+                          <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
+
+
+
                 </div>
 <!-- MODAL -->
 <div class="modal fade userInputs" id="recipeInputs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -72,40 +108,43 @@
         </div>
         <form id="recipeForm">
             <div class="modal-body container">
-              <div class="row form-check">
-                <div class="col-6">   
-                  <input class="form-check-input" type="radio" name="Vegetarian" id="Vegetarian" value="Vegetarian">
-                  <label class="form-check-label" for="Vegetarian">Vegetarian</label>
-                  <br>
-                  <input class="form-check-input" type="radio" name="Pescatarian" id="Pescatarian" value="Pescatarian">
-                  <label class="form-check-label" for="Pescatarian">Pescatarian</label>
-                  <br>
-                  <input class="form-check-input" type="radio" name="Keto" id="Keto" value="keto">
-                  <label class="form-check-label" for="keto">Keto</label>
-                </div> 
-                <div class="col-6">
-                  <input class="form-check-input" type="radio" name="glutenFree" id="glutenFree" value="glutenFree">
-                  <label class="form-check-label" for="glutenFree">Gluten Free</label>
-                  <br>
-                  <input class="form-check-input" type="radio" name="dairyFree" id="dairyFree" value="dairyFree">
-                  <label class="form-check-label" for="dairyFree">Dairy Free</label>
-                  <br>
-                  <input class="form-check-input" type="radio" name="Vegan" id="vegan" value="vegan">
-                  <label class="form-check-label" for="Vegan">Vegan</label>
+              <div class="form-check">
+                <div class="row">
+                  <div class="col-6">   
+                    <input class="form-check-input" type="radio" name="Vegetarian" id="Vegetarian" value="Vegetarian">
+                    <label class="form-check-label" for="Vegetarian">Vegetarian</label>
+                    <br>
+                    <input class="form-check-input" type="radio" name="Pescatarian" id="Pescatarian" value="Pescatarian">
+                    <label class="form-check-label" for="Pescatarian">Pescatarian</label>
+                    <br>
+                    <input class="form-check-input" type="radio" name="Keto" id="Keto" value="keto">
+                    <label class="form-check-label" for="keto">Keto</label>
+                  </div> 
+                 
+                  <div class="col-6">
+                    <input class="form-check-input" type="radio" name="glutenFree" id="glutenFree" value="glutenFree">
+                    <label class="form-check-label" for="glutenFree">Gluten Free</label>
+                    <br>
+                    <input class="form-check-input" type="radio" name="dairyFree" id="dairyFree" value="dairyFree">
+                    <label class="form-check-label" for="dairyFree">Dairy Free</label>
+                    <br>
+                    <input class="form-check-input" type="radio" name="Vegan" id="vegan" value="vegan">
+                    <label class="form-check-label" for="Vegan">Vegan</label>
+                  </div>
                 </div>
               </div>
               <div class="form-group">
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup-sizing-default">Item 1</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient" max="15" aria-describedby="inputGroup-sizing-default">
+                    <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient" maxlength="15" aria-describedby="inputGroup-sizing-default">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup-sizing-default">Item 2</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient" max="15" aria-describedby="inputGroup-sizing-default">
+                    <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient" maxlength="15" aria-describedby="inputGroup-sizing-default">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup-sizing-default">Item 3</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient" max="15" aria-describedby="inputGroup-sizing-default">
+                    <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient" maxlength="15" aria-describedby="inputGroup-sizing-default">
                 </div>
                 
               </div>  
@@ -115,11 +154,17 @@
         </form>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <input type="submit" class="btn btn-dark" value="Get Recipes!">
+          <input type="submit" class="btn btn-dark searchRecipes" value="Get Recipes!">
         </div>
       </div>
     </div>
   </div>
+  
+  <nav class="navbar fixed-bottom navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://github.com/AGRASSL/BootcampTeamProject1" target="_blank">See Our Project On Github!</a>
+    </div>
+  </nav>
   
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -129,6 +174,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
-        <script src="" async defer></script>
+        <script src="script.js"></script>
     </body>
 </html>

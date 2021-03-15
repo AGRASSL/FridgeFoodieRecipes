@@ -1,0 +1,23 @@
+/* search-results HTML/css */
+.selectOptions {
+    margin-left: 15px;
+    margin-top:15px;
+    line-height: 1.6;
+}
+
+.resultsPageBtns {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 25%vw;
+}
+
+.radioBtns {
+    padding-left: 20px;
+}
+
+.resultsPageBtns {
+    margin-top: 15px;
+}

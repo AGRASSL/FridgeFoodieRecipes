@@ -1,0 +1,47 @@
+/* search-results HTML/css */
+header h1 {
+    text-align: center;
+    padding: 20px;
+    width: 100vw;
+    margin: auto;
+    height: 100px;
+}
+/* https://unsplash.com/photos/gwT4rs_xlUA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink */
+.headerImage {
+    background: url("assets/vince-lee-gwT4rs_xlUA-unsplash.jpg");
+    width: 100vw;
+    background-repeat: repeat;
+    height: 200px;
+    background-size: contain;
+}
+.selectOptions {
+    margin-left: 15px;
+    margin-top:15px;
+    line-height: 1.6;
+}
+
+.sideCar {
+    padding-left: 15px;
+    padding-top: 10px;
+    
+}
+
+.resultsPageBtns {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 25%vw;
+}
+
+.radioBtns {
+    padding-left: 20px;
+}
+
+
+
+.resultsPageBtns {
+    margin-top: 15px;
+}
+

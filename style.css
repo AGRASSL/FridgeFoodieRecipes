@@ -1,6 +1,6 @@
 
 
-.bg-dark {
+header h1 {
     text-align: center;
     padding: 20px;
     width: 100vw;
@@ -8,10 +8,6 @@
     height: 100px;
 }
 
-#pure-img-responsive{
-    width: 100%;
-    
-}
 
 .footer {
     background-color: #283c63;
@@ -43,9 +39,13 @@ h2 {
 .personalImages {
     margin:10px;
     display: flex;
-    justify-content: flex-start;
-    padding-left: 200px;
+    justify-content: center;
+    
 
+}
+
+.welcomeContent {
+    padding-left: 10px;
 }
 
 .avatar {
@@ -57,9 +57,24 @@ h2 {
 }
 
 .getStarted {
-    margin:60px;
     padding:15px;
     border-radius: 10px;
-    margin-left: 225px;
-    margin-top:100px;
+    margin:50px;
 }
+
+input[type=radio] {
+    float: left;
+}
+
+#slider {
+    width: 70%;
+    margin: auto;
+}
+
+
+
+/* @media only screen and (min-width: 768px and up){
+.image1 {background-image: url(./assets/jeff-sheldon-6MT4_Ut8a3Y-unsplash.jpg);
+        background-size: cover;
+    }
+}    */

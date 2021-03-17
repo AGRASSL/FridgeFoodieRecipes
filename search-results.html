@@ -1,80 +1,186 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link
-        rel="stylesheet"
-        href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
-      />
-      <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-        crossorigin="anonymous"
-      />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&display=swap" rel="stylesheet">
-        
-        <link rel="stylesheet" href="search-results-style.css">
-        <title>Title Here!</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="search-results-style.css">
+  <title>Title Here!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
     </head>
-    <body class="container-fluid"> 
-        <header>
-            <h1 class="bg-dark text-white">Placeholder Title!</h1>
-            <div class="headerImage"></div>
-        </header>
-    <div class="row sideCar animate__animated animate__fadeInUp">
-      <div class="col-sm-12 col-md-3 col-lg-3"> 
-              <h4 class="card-title">Search New Selections:</h4>
+
+    <body class="container-fluid">
+      <header>
+        <h1 class="bg-dark text-white">Placeholder Title!</h1>
+        <div class="headerImage"></div>
+      </header>
+      <div class="row sideCar animate__animated animate__fadeInUp">
+        <div class="grid-container">
+          <div class="col-sm-12 col-md-3 col-lg-3 grid-child">
+            <h4 class="card-title">Search New Selections:</h4>
             <div class="form-group">
-                  <div class="input-group mb-3">
-                    <span class="input-group-text itemLabels" id="item1">Item 1</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient" maxlength="15" aria-describedby="inputGroup-sizing-default">
-                  </div>
-                  <div class="input-group mb-3">
-                    <span class="input-group-text itemLabels" id="=item2">Item 2</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient" maxlength="15" aria-describedby="inputGroup-sizing-default">
-                  </div>
-                  <div class="input-group mb-3">
-                    <span class="input-group-text itemLabels" id="item3">Item 3</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient" maxlength="15" aria-describedby="inputGroup-sizing-default">
-                  </div>
-                  <div class="form-check radioBtns">
-                  <input class="form-check-input" type="checkbox" name="vegetarian" id="vegetarian" value="vegetarian">
-                  <label class="form-check-label" for="vegetarian">Vegetarian</label>
-                    <br>
-                  <input class="form-check-input" type="checkbox" name="pescatarian" id="pescatarian" value="pescatarian">
-                  <label class="form-check-label" for="pescatarian">Pescatarian</label>
-                    <br>
-                  <input class="form-check-input" type="checkbox" name="keto" id="keto" value="keto">
-                  <label class="form-check-label" for="keto">Keto</label>
-                    <br>
-                  <input class="form-check-input" type="checkbox" name="glutenFree" id="glutenFree" value="glutenFree">
-                  <label class="form-check-label" for="glutenFree">Gluten Free</label>
-                    <br>
-                  <input class="form-check-input" type="checkbox" name="dairyFree" id="dairyFree" value="dairyFree">
-                  <label class="form-check-label" for="dairyFree">Dairy Free</label>
-                    <br>
-                  <input class="form-check-input" type="checkbox" name="vegan" id="vegan" value="vegan">
-                  <label class="form-check-label" for="vegan">Vegan</label>
-                  </div>
-                  <div class="resultsPageBtns">
-                    <button type="button" class="btn btn-dark goBack">Go Back</button>
-                    <input type="submit" class="btn btn-dark secondRecipeBtn" value="View Recipes">
-                  </div> 
+              <div class="input-group mb-3">
+                <span class="input-group-text itemLabels" id="item1">Item 1</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient"
+                  maxlength="15" aria-describedby="inputGroup-sizing-default">
               </div>
-           
+              <div class="input-group mb-3">
+                <span class="input-group-text itemLabels" id="=item2">Item 2</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient"
+                  maxlength="15" aria-describedby="inputGroup-sizing-default">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text itemLabels" id="item3">Item 3</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter an Ingredient"
+                  maxlength="15" aria-describedby="inputGroup-sizing-default">
+              </div>
+              <div class="form-check radioBtns">
+                <input class="form-check-input" type="checkbox" name="vegetarian" id="vegetarian" value="vegetarian">
+                <label class="form-check-label" for="vegetarian">Vegetarian</label>
+                <br>
+                <input class="form-check-input" type="checkbox" name="pescatarian" id="pescatarian" value="pescatarian">
+                <label class="form-check-label" for="pescatarian">Pescatarian</label>
+                <br>
+                <input class="form-check-input" type="checkbox" name="keto" id="keto" value="keto">
+                <label class="form-check-label" for="keto">Keto</label>
+                <br>
+                <input class="form-check-input" type="checkbox" name="glutenFree" id="glutenFree" value="glutenFree">
+                <label class="form-check-label" for="glutenFree">Gluten Free</label>
+                <br>
+                <input class="form-check-input" type="checkbox" name="dairyFree" id="dairyFree" value="dairyFree">
+                <label class="form-check-label" for="dairyFree">Dairy Free</label>
+                <br>
+                <input class="form-check-input" type="checkbox" name="vegan" id="vegan" value="vegan">
+                <label class="form-check-label" for="vegan">Vegan</label>
+              </div>
+              <div class="resultsPageBtns">
+                <button type="button" class="btn btn-dark goBack">Go Back</button>
+                <input type="submit" class="btn btn-dark secondRecipeBtn" value="View Recipes">
+              </div>
+            </div>
+    
+          </div>
+          <!-- RESULT GALLERY -->
+          <div class="container grid-child">
+            <div class="row">
+              <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="card text-center">
+                  <img src="https://gimmedelicious.com/wp-content/uploads/2014/03/Cauliflower-Crust-Pizza-1-500x500.jpg"
+                    class="card-img-top" id="cardImg1" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" id="cardTitle1">Recipe title</h5>
+                    <p class="card-text" id="cardInfo1">Recipe info</p>
+                    <a href="#" class="btn btn-primary" id="cardLink1">Recipe link</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="card text-center">
+                  <img src="https://gimmedelicious.com/wp-content/uploads/2014/03/Cauliflower-Crust-Pizza-1-500x500.jpg"
+                    class="card-img-top" id="cardImg2" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" id="cardTitle2">Recipe title</h5>
+                    <p class="card-text" id="cardInfo2">Recipe info</p>
+                    <a href="#" class="btn btn-primary" id="cardLink2">Recipe link</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="card text-center">
+                  <img src="https://gimmedelicious.com/wp-content/uploads/2014/03/Cauliflower-Crust-Pizza-1-500x500.jpg"
+                    class="card-img-top" id="cardImg3" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" id="cardTitle3">Recipe title</h5>
+                    <p class="card-text" id="cardInfo3">Recipe info</p>
+                    <a href="#" class="btn btn-primary" id="cardLink3">Recipe link</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="card text-center">
+                  <img src="https://gimmedelicious.com/wp-content/uploads/2014/03/Cauliflower-Crust-Pizza-1-500x500.jpg"
+                    class="card-img-top" id="cardImg4" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" id="cardTitle4">Recipe title</h5>
+                    <p class="card-text" id="cardInfo4">Recipe info</p>
+                    <a href="#" class="btn btn-primary" id="cardLink1">Recipe link</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="card text-center">
+                  <img src="https://gimmedelicious.com/wp-content/uploads/2014/03/Cauliflower-Crust-Pizza-1-500x500.jpg"
+                    class="card-img-top" id="cardImg5" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" id="cardTitle5">Recipe title</h5>
+                    <p class="card-text" id="cardInfo5">Recipe info</p>
+                    <a href="#" class="btn btn-primary" id="cardLink2">Recipe link</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="card text-center">
+                  <img src="https://gimmedelicious.com/wp-content/uploads/2014/03/Cauliflower-Crust-Pizza-1-500x500.jpg"
+                    class="card-img-top" id="cardImg6" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" id="cardTitle6">Recipe title</h5>
+                    <p class="card-text" id="cardInfo6">Recipe info</p>
+                    <a href="#" class="btn btn-primary" id="cardLink3">Recipe link</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="card text-center">
+                  <img src="https://gimmedelicious.com/wp-content/uploads/2014/03/Cauliflower-Crust-Pizza-1-500x500.jpg"
+                    class="card-img-top" id="cardImg7" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" id="cardTitle7">Recipe title</h5>
+                    <p class="card-text" id="cardInfo7">Recipe info</p>
+                    <a href="#" class="btn btn-primary" id="cardLink1">Recipe link</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="card text-center">
+                  <img src="https://gimmedelicious.com/wp-content/uploads/2014/03/Cauliflower-Crust-Pizza-1-500x500.jpg"
+                    class="card-img-top" id="cardImg8" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" id="cardTitle8">Recipe title</h5>
+                    <p class="card-text" id="cardInfo8">Recipe info</p>
+                    <a href="#" class="btn btn-primary" id="cardLink2">Recipe link</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-3 col-lg-3">
+                <div class="card text-center">
+                  <img src="https://gimmedelicious.com/wp-content/uploads/2014/03/Cauliflower-Crust-Pizza-1-500x500.jpg"
+                    class="card-img-top" id="cardImg9" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title" id="cardTitle9">Recipe title</h5>
+                    <p class="card-text" id="cardInfo9">Recipe info</p>
+                    <a href="#" class="btn btn-primary" id="cardLink3">Recipe link</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div> 
+      </div>
             
 
 

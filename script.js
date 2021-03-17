@@ -45,6 +45,7 @@ async function sendApiRequest(){
     console.log(response)
     let data = await response.json()
     console.log(data)
+    
     useApiData(data)
 }
 
@@ -54,9 +55,9 @@ async function sendApiRequest(){
         for (var i = 1; i < 10; i++) {
             $("#cardTitle" + i).text(data[""][""]);
             $("#cardInfo" + i).text(data[""][""]);
-            var cardLinkURL = ;
+            // var cardLinkURL = ;
             $("#cardLink" + i).attr('href', cardLinkURL);
-            var cardImgURL = ;
+            // var cardImgURL = ;
             $("#cardImg" + i).attr('src', cardImgURL);
         }
     }

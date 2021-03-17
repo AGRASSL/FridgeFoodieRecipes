@@ -1,3 +1,6 @@
+body{
+    margin-bottom: 25px;
+}
 
 
 header h1 {
@@ -62,14 +65,20 @@ h2 {
     margin:50px;
 }
 
-input[type=radio] {
-    float: left;
+.custom-select{
+    margin-right: 20px;
+   
+  
 }
 
-#slider {
+.fixed-bottom {
+    margin-top: 10px;
+}
+
+/* #slider {
     width: 70%;
     margin: auto;
-}
+} */
 
 
 

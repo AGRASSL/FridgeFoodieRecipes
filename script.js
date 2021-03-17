@@ -26,17 +26,7 @@ $('.secondRecipeBtn').on("click", function(){
 })
 
 
-var API = 'https://http://www.cors-anywhere.herokuapp.com/https://api.edamam.com/search?app_id=1c49a61b&api_key=db0145d0d0dd134bbf428353e18af69b&q=pizza'
-fetch(API)
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(data){
-        console.log(data);
-    })
 
-
-});
 
 async function sendApiRequest(){
     let APP_ID = "1c49a61b"
@@ -46,17 +36,21 @@ async function sendApiRequest(){
     let data = await response.json()
     console.log(data)
     useApiData(data)
+
+    // POPULATE CARD CONTENT
+    //API CALL
+    // success: function (data) {
+    //     for (var i = 1; i < 10; i++) {
+    //         $("#cardTitle" + i).text(data[""][""]);
+    //         $("#cardInfo" + i).text(data[""][""]);
+    //         var cardLinkURL = ;
+    //         $("#cardLink" + i).attr('href', cardLinkURL);
+    //         var cardImgURL = ;
+    //         $("#cardImg" + i).attr('src', cardImgURL);
+    //         }
+    // }
+
+
 }
 
-// POPULATE CARD CONTENT
-    //API CALL
-    success: function (data) {
-        for (var i = 1; i < 10; i++) {
-            $("#cardTitle" + i).text(data[""][""]);
-            $("#cardInfo" + i).text(data[""][""]);
-            var cardLinkURL = ;
-            $("#cardLink" + i).attr('href', cardLinkURL);
-            var cardImgURL = ;
-            $("#cardImg" + i).attr('src', cardImgURL);
-        }
-    }
+});    

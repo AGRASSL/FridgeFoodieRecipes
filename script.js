@@ -2,7 +2,7 @@
 var ingredients = $()
 var diet = $()
 
-//FUNCTION
+//FUNCTIONS
 
 $(document).ready(function() { //prevents js from loading until the document is ready
 
@@ -38,3 +38,13 @@ fetch(API)
 
 
 });
+
+async function sendApiRequest(){
+    let APP_ID = "1c49a61b"
+    let API_KEY = "db0145d0d0dd134bbf428353e18af69b"
+    let response = await fetch("https://api.edamam.com/search?q=pizza&app_id=1c49a61b&app_key=db0145d0d0dd134bbf428353e18af69b");
+    console.log(response)
+    let data = await response.json()
+    console.log(data)
+    useApiData(data)
+}

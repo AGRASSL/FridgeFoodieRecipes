@@ -2,7 +2,6 @@
 var ingredients = $()
 var diet = $()
 
-//FUNCTIONS
 
 $(document).ready(function() { //prevents js from loading until the document is ready
 
@@ -48,3 +47,16 @@ async function sendApiRequest(){
     console.log(data)
     useApiData(data)
 }
+
+// POPULATE CARD CONTENT
+    //API CALL
+    success: function (data) {
+        for (var i = 1; i < 10; i++) {
+            $("#cardTitle" + i).text(data[""][""]);
+            $("#cardInfo" + i).text(data[""][""]);
+            var cardLinkURL = ;
+            $("#cardLink" + i).attr('href', cardLinkURL);
+            var cardImgURL = ;
+            $("#cardImg" + i).attr('src', cardImgURL);
+        }
+    }

@@ -13,9 +13,11 @@ $('.searchRecipes').on("click", function() { // activate enter button
         let ingredient1 = $("#searchItem1").val();
         let ingredient2 = $("#searchItem2").val();
         let ingredient3 = $("#searchItem3").val();
+        let dietaryRes = $(this).find('<option>');
         console.log(ingredient1);
         console.log(ingredient2);
         console.log(ingredient3);
+        console.log(restriction);
         ingredientsArr.push(ingredient1,ingredient2,ingredient3);
         console.log(ingredientsArr);
         sendApiRequest(ingredientsArr)
@@ -40,15 +42,14 @@ $('.secondRecipeBtn').on("click", function(){
     let ingredient1 = $("#searchItem1").val();
     let ingredient2 = $("#searchItem2").val();
     let ingredient3 = $("#searchItem3").val();
-    let dietaryRes = $(this).find('<option>')
-    console.log(this)
-    console.log(dietaryRes);
+    let dietaryRes = $(".custom-select").val();
     console.log(ingredient1);
     console.log(ingredient2);
     console.log(ingredient3);
+    console.log(dietaryRes);
     ingredientsArr.push(ingredient1,ingredient2,ingredient3);
     console.log(ingredientsArr);
-    sendApiRequest(ingredientsArr)
+    sendApiRequest(ingredientsArr, dietaryRes);
     //let ingredients = $("searchPageInput").val([ingredient1,ingredient2,ingredient3]);
     //console.log(ingredients);
 })
@@ -56,10 +57,10 @@ $('.secondRecipeBtn').on("click", function(){
 
 
 
-async function sendApiRequest(ingredientsArr){
+async function sendApiRequest(ingredientsArr, dietaryRes){
     let APP_ID = "1c49a61b"
     let API_KEY = "db0145d0d0dd134bbf428353e18af69b"
-    let response = await fetch("https://api.edamam.com/search?q=" + ingredientsArr +"&app_id=1c49a61b&app_key=db0145d0d0dd134bbf428353e18af69b");
+    let response = await fetch("https://api.edamam.com/search?q=" + ingredientsArr +"&health=" + dietaryRes +"&app_id=1c49a61b&app_key=db0145d0d0dd134bbf428353e18af69b")
     console.log(response)
     let data = await response.json()
     console.log(data)

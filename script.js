@@ -2,8 +2,10 @@
 var ingredients = $();
 var diet = $();
 
+
 $(document).ready(function () {
   //prevents js from loading until the document is ready
+
 
   var ingredientsArr = [];
 
@@ -68,20 +70,19 @@ async function sendApiRequest(ingredientsArr, dietaryRes){
     console.log(response)
     let data = await response.json()
     console.log(data)
-    //useApiData(data)
+    useApiData(data)
+}
 
-
-    // POPULATE CARD CONTENT
+// POPULATE CARD CONTENT
     //API CALL
-    // success: function (data) {
-    //     for (var i = 1; i < 10; i++) {
-    //         $("#cardTitle" + i).text(data[""][""]);
-    //         $("#cardInfo" + i).text(data[""][""]);
-    //         var cardLinkURL = ;
-    //         $("#cardLink" + i).attr('href', cardLinkURL);
-    //         var cardImgURL = ;
-    //         $("#cardImg" + i).attr('src', cardImgURL);
-    //         }
-    // }
-  }
+    success: function (data) {
+        for (var i = 1; i < 10; i++) {
+            $("#cardTitle" + i).text(data[""][""]);
+            $("#cardInfo" + i).text(data[""][""]);
+            var cardLinkURL = ;
+            $("#cardLink" + i).attr('href', cardLinkURL);
+            var cardImgURL = ;
+            $("#cardImg" + i).attr('src', cardImgURL);
+        }
+    } }
 });

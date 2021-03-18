@@ -12,8 +12,15 @@ $(document).ready(function () {
     var searchResults = "search-results.html";
     location.assign(searchResults);
   });
+    
 
   //AJAX function {}
+
+$('.getStarted').on("click", function() { // activate enter button
+        var searchResults = "search-results.html"
+        location.assign(searchResults); 
+       
+
 
   $(".goBack").on("click", function () {
     var goBack = "index.html";
@@ -25,6 +32,7 @@ $(document).ready(function () {
     let ingredient1 = $("#searchItem1").val();
     let ingredient2 = $("#searchItem2").val();
     let ingredient3 = $("#searchItem3").val();
+
     ingredientsArr.push(ingredient1, ingredient2, ingredient3);
     console.log(ingredientsArr);
     sendApiRequest(ingredientsArr);
@@ -41,6 +49,27 @@ $(document).ready(function () {
     console.log(response);
     let data = await response.json();
     console.log(data);
+
+    let dietaryRes = $(".custom-select").val();
+    console.log(dietaryRes);
+    ingredientsArr.push(ingredient1,ingredient2,ingredient3);
+    console.log(ingredientsArr);
+    sendApiRequest(ingredientsArr, dietaryRes);
+  
+})
+
+
+
+
+async function sendApiRequest(ingredientsArr, dietaryRes){
+    let APP_ID = "1c49a61b"
+    let API_KEY = "db0145d0d0dd134bbf428353e18af69b"
+    let response = await fetch("https://api.edamam.com/search?q=" + ingredientsArr +"&health=" + dietaryRes +"&app_id=1c49a61b&app_key=db0145d0d0dd134bbf428353e18af69b")
+    console.log(response)
+    let data = await response.json()
+    console.log(data)
+    //useApiData(data)
+
 
     // POPULATE CARD CONTENT
     //API CALL

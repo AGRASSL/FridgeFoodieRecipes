@@ -1,47 +1,72 @@
 //VARIABLES
-var ingredients = $()
-var diet = $()
+var ingredients = $();
+var diet = $();
 
 
-$(document).ready(function() { //prevents js from loading until the document is ready
+$(document).ready(function () {
+  //prevents js from loading until the document is ready
 
-$('.searchRecipes').on("click", function() { // activate enter button
+
+  var ingredientsArr = [];
+
+  $(".getStarted").on("click", function () {
+    // activate enter button
+    var searchResults = "search-results.html";
+    location.assign(searchResults);
+  });
+    
+
+  //AJAX function {}
+
+$('.getStarted').on("click", function() { // activate enter button
         var searchResults = "search-results.html"
         location.assign(searchResults); 
-        // ingredients.val(); // create ingredient variable
-        // diet.val(); // create diet variable
-        // call AJAX function
-     });
-        //AJAX function {}
+       
 
 
-$('.goBack').on("click", function(){
-    var goBack = "index.html"
+  $(".goBack").on("click", function () {
+    var goBack = "index.html";
     location.assign(goBack);
+  });
+
+  $(".secondRecipeBtn").on("click", function () {
+    ingredientsArr.length = 0;
+    let ingredient1 = $("#searchItem1").val();
+    let ingredient2 = $("#searchItem2").val();
+    let ingredient3 = $("#searchItem3").val();
+
+    ingredientsArr.push(ingredient1, ingredient2, ingredient3);
+    console.log(ingredientsArr);
+    sendApiRequest(ingredientsArr);
+  });
+
+  async function sendApiRequest(ingredientsArr) {
+    let APP_ID = "1c49a61b";
+    let API_KEY = "db0145d0d0dd134bbf428353e18af69b";
+    let response = await fetch(
+      "https://api.edamam.com/search?q=" +
+        ingredientsArr +
+        "&app_id=1c49a61b&app_key=db0145d0d0dd134bbf428353e18af69b"
+    );
+    console.log(response);
+    let data = await response.json();
+    console.log(data);
+
+    let dietaryRes = $(".custom-select").val();
+    console.log(dietaryRes);
+    ingredientsArr.push(ingredient1,ingredient2,ingredient3);
+    console.log(ingredientsArr);
+    sendApiRequest(ingredientsArr, dietaryRes);
+  
 })
 
 
-$('.secondRecipeBtn').on("click", function(){
-
-})
 
 
-var API = 'https://http://www.cors-anywhere.herokuapp.com/https://api.edamam.com/search?app_id=1c49a61b&api_key=db0145d0d0dd134bbf428353e18af69b&q=pizza'
-fetch(API)
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(data){
-        console.log(data);
-    })
-
-
-});
-
-async function sendApiRequest(){
+async function sendApiRequest(ingredientsArr, dietaryRes){
     let APP_ID = "1c49a61b"
     let API_KEY = "db0145d0d0dd134bbf428353e18af69b"
-    let response = await fetch("https://api.edamam.com/search?q=pizza&app_id=1c49a61b&app_key=db0145d0d0dd134bbf428353e18af69b");
+    let response = await fetch("https://api.edamam.com/search?q=" + ingredientsArr +"&health=" + dietaryRes +"&app_id=1c49a61b&app_key=db0145d0d0dd134bbf428353e18af69b")
     console.log(response)
     let data = await response.json()
     console.log(data)
@@ -59,4 +84,5 @@ async function sendApiRequest(){
             var cardImgURL = ;
             $("#cardImg" + i).attr('src', cardImgURL);
         }
-    }
+    } }
+});

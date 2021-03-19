@@ -1,53 +1,52 @@
 /* search-results HTML/css */
 header h1 {
-    text-align: center;
-    padding: 20px;
-    width: 100vw;
-    margin: auto;
-    height: 100px;
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+  height: 100px;
+  font-family: "Lato", sans-serif;
+}
+
+header h1 p {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
 }
 /* https://unsplash.com/photos/gwT4rs_xlUA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink */
 .headerImage {
-    background: url("assets/vince-lee-gwT4rs_xlUA-unsplash.jpg");
-    width: 100vw;
-    background-repeat: repeat;
-    height: 200px;
-    background-size: contain;
-}
-.selectOptions {
-    margin-left: 15px;
-    margin-top:15px;
-    line-height: 1.6;
+  background: url("assets/vince-lee-gwT4rs_xlUA-unsplash.jpg");
+  background-repeat: repeat;
+  height: 200px;
+  background-size: contain;
 }
 
-.sideCar {
-    padding-left: 15px;
-    padding-top: 10px;
-    
+.wrapper {
+  padding: 1rem;
+}
+
+.searchCol {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.selectOptions {
+  margin-left: 15px;
+  margin-top: 15px;
+  line-height: 1.6;
 }
 
 .resultsPageBtns {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .card {
-    width: 25%vw;
+  width: 25%vw;
 }
 
 .radioBtns {
-    padding-left: 20px;
+  padding-left: 20px;
 }
-
-
 
 .resultsPageBtns {
-    margin-top: 15px;
+  margin-top: 15px;
 }
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-}
-
-

@@ -5,17 +5,19 @@ $(document).ready(function () {
   var ingredStorageArr = [];
   var dietResArr = [];
 
+  //EVENT LISTENER ON LANDING PAGE BUTTON TO GET TO SEARCH RESULTS HTML
   $(".getStarted").on("click", function () {
-    // activate enter button
     var searchResults = "search-results.html";
     location.assign(searchResults);
   });
 
+  //EVENT LISTENER ON THE SEARCH RESULTS HTML TO TAKE YOU BACK TO LANDING PAGE
   $(".goBack").on("click", function () {
     var goBack = "index.html";
     location.assign(goBack);
   });
 
+  //EVENT LISTENER ON 'VIEW RECIPES' BUTTON TO RENDER RECIPE RESULTS AND STORES INPUTS TO LOCAL STORAGE
   $(".secondRecipeBtn").on("click", function () {
     ingredientsArr.length = 0;
     let ingredient1 = $("#searchItem1").val();
@@ -32,7 +34,7 @@ $(document).ready(function () {
     oldDiet.push(dietResArr);
     console.log(ingredientsArr);
     console.log(dietaryRes);
-    window.localStorage.setItem("Ingredients", ingredientsArr);
+    window.localStorage.setItem("userIngred", JSON.stringify(ingredStorageArr));
     window.localStorage.setItem("userDietRes", JSON.stringify(dietResArr));
 
     $(".cardCol")[0].style.display = "block";
@@ -43,6 +45,7 @@ $(document).ready(function () {
     getWine(ingredientsArr);
   });
 
+  //API CALL TO DISPLAY RECIPES BASED ON USER INPUTS
   async function sendApiRequest(ingredientsArr, dietaryRes) {
     let APP_ID = "1c49a61b";
     let API_KEY = "db0145d0d0dd134bbf428353e18af69b";
@@ -56,7 +59,7 @@ $(document).ready(function () {
 
     let data = await response.json();
     console.log(data);
-
+    //HIDE ALL CARDS IF NO RECIPES ARE RETURNED BY API, DISPLAY 'NO RESULTS'
     if (data["count"] > 0) {
       cardPop(data);
     } else {
@@ -65,7 +68,7 @@ $(document).ready(function () {
       $(".cardCol")[2].style.display = "none";
       $(".noRes")[0].style.display = "block";
     }
-
+    //POPULATES CARDS WITH RECIPE INFORMATION
     function cardPop(ingData) {
       console.log(ingData);
 
@@ -80,7 +83,7 @@ $(document).ready(function () {
     }
     cardPop(data);
   }
-
+  //SECOND API CALL TO GET WINE PAIRINGS BASED OFF USER INGREDIENTS INPUT
   async function getWine() {
     let ingredient1 = $("#searchItem1").val();
     let API_KEY = "aba6772464154899a2eec582fbee5c92";

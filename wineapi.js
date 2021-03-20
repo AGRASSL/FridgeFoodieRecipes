@@ -25,7 +25,6 @@ $(document).ready(function () {
         window.localStorage.setItem("Ingredients", ingredientsArr);
 
         sendApiRequest(ingredientsArr, dietaryRes);
-        getWine(ingredientsArr)
     });
 
     async function sendApiRequest(ingredientsArr, dietaryRes) {
@@ -42,6 +41,13 @@ $(document).ready(function () {
         let data = await response.json();
         console.log(data);
 
+       async function getWine(wine){
+            let KEY = "aba6772464154899a2eec582fbee5c92"
+            let response = await fetch(
+                `https://api.spoonacular.com/food/wine/pairing?food=` + data + `apiKey=${KEY}`
+            )};
+        console.log(wine);
+
         function cardPop(ingData) {
             console.log(ingData);
             
@@ -56,32 +62,6 @@ $(document).ready(function () {
         }
         cardPop(data);
     }
-
-    async function getWine() {
-        let ingredient1 = $("#searchItem1").val();
-        let API_KEY = "aba6772464154899a2eec582fbee5c92"
-        let response = await fetch(`https://api.spoonacular.com/food/wine/pairing?food=` + ingredient1 + `&apiKey=${API_KEY}`);
-        console.log(response)
-        let wData = await response.json()
-        console.log(wData)
-        useWineData(wData);
-        
-      
-      };
-
-      function useWineData(wData){
-        document.querySelector("#wine-box").innerHTML = `
-        <div class="wine-body">
-        <h5 class="wine-hding" id="wine-hding">Drink Up!</h5>
-        <h5 class="wine-title" id="wineTitle">${wData.pairedWines}</h5>
-        <p class="wine-text" id="wineInfo">${wData.pairingText}</p>
-      </div>
-   </div>
-   `  
-      }
-      
     
 
 });
-
-

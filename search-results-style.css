@@ -50,3 +50,11 @@ header h1 p {
 .resultsPageBtns {
   margin-top: 15px;
 }
+
+.cardCol {
+  display: none;
+}
+
+.noRes {
+  display: none;
+}

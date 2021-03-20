@@ -37,6 +37,11 @@ header h1 p {
   line-height: 1.6;
 }
 
+#wine-box {
+  font-family: "Lato", sans-serif;
+  padding: 15px;
+}
+
 /* FORMATTING FOR THE GO BACK AND VIEW RECIPE BUTTONS */
 .resultsPageBtns {
   display: flex;
@@ -45,6 +50,8 @@ header h1 p {
 
 .card {
   width: 25%vw;
+  height: 35%;
+  overflow: auto;
 }
 
 .radioBtns {

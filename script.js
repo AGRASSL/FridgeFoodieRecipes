@@ -40,8 +40,12 @@ $(document).ready(function () {
     $(".cardCol")[0].style.display = "block";
     $(".cardCol")[1].style.display = "block";
     $(".cardCol")[2].style.display = "block";
+    if (dietaryRes == "Dietary Restrictions?") {
+      sendApiRequestIngred(ingredientsArr);
+    } else {
+      sendApiRequest(ingredientsArr, dietaryRes);
+    }
 
-    sendApiRequest(ingredientsArr, dietaryRes);
     getWine(ingredientsArr);
   });
 
@@ -83,6 +87,71 @@ $(document).ready(function () {
     }
     cardPop(data);
   }
+
+  //SECOND API CALL TO GET WINE PAIRINGS BASED OFF USER INGREDIENTS INPUT
+  async function getWine() {
+    let ingredient1 = $("#searchItem1").val();
+    let API_KEY = "aba6772464154899a2eec582fbee5c92";
+    let response = await fetch(
+      `https://api.spoonacular.com/food/wine/pairing?food=` +
+        ingredient1 +
+        `&apiKey=${API_KEY}`
+    );
+    console.log(response);
+    let wData = await response.json();
+    console.log(wData);
+    useWineData(wData);
+  }
+
+  function useWineData(wData) {
+    document.querySelector("#wine-box").innerHTML = `
+        <div class="card-body wine-body">
+        <h5 class="wine-hding card-title" id="wine-hding">Drink Up!</h5>
+        <h5 class="card-text wine-title" id="wineTitle">${wData.pairedWines}</h5>
+        <p class="card-text wine-text" id="wineInfo">${wData.pairingText}</p>
+      </div>
+   </div>
+   `;
+  }
+
+  //second function-working on diet res
+
+  async function sendApiRequestIngred(ingredientsArr) {
+    let APP_ID = "1c49a61b";
+    let API_KEY = "db0145d0d0dd134bbf428353e18af69b";
+    let response = await fetch(
+      "https://api.edamam.com/search?q=" +
+        ingredientsArr +
+        "&app_id=1c49a61b&app_key=db0145d0d0dd134bbf428353e18af69b"
+    );
+
+    let data = await response.json();
+    console.log(data);
+    //HIDE ALL CARDS IF NO RECIPES ARE RETURNED BY API, DISPLAY 'NO RESULTS'
+    if (data["count"] > 0) {
+      cardPop(data);
+    } else {
+      $(".cardCol")[0].style.display = "none";
+      $(".cardCol")[1].style.display = "none";
+      $(".cardCol")[2].style.display = "none";
+      $(".noRes")[0].style.display = "block";
+    }
+    //POPULATES CARDS WITH RECIPE INFORMATION
+    function cardPop(ingData) {
+      console.log(ingData);
+
+      for (var i = 1; i < 10; i++) {
+        $("#cardTitle" + i).text(ingData["hits"][i]["recipe"]["label"]);
+        $("#cardInfo" + i).text(ingData["hits"][i]["recipe"]["source"]);
+        var cardLinkURL = ingData["hits"][i]["recipe"]["url"];
+        $("#cardLink" + i).attr("href", cardLinkURL); // create a property path
+        var cardImgURL = ingData["hits"][i]["recipe"]["image"];
+        $("#cardImg" + i).attr("src", cardImgURL); // create a property path
+      }
+    }
+    cardPop(data);
+  }
+
   //SECOND API CALL TO GET WINE PAIRINGS BASED OFF USER INGREDIENTS INPUT
   async function getWine() {
     let ingredient1 = $("#searchItem1").val();

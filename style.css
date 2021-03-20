@@ -1,89 +1,71 @@
-body{
-    margin-bottom: 25px;
+body {
+  margin-bottom: 25px;
 }
-
 
 header h1 {
-    text-align: center;
-    padding: 20px;
-    width: 100vw;
-    margin: auto;
-    height: 100px;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  margin: auto;
+  height: 100px;
+  font-family: "Lato", sans-serif;
 }
 
+header h1 p {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+
+.wrapper {
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.image1 {
+  padding: 0px;
+}
 
 .footer {
-    background-color: #283c63;
-}
-
-.modal-header, .modal-footer {
-  background-color: #928a97;
-  color:white;
-  font-weight: 2px;
-}
-
-
-.form-check{
-    line-height: 1.5;
-}
-
-.form-group {
-    margin-top: 20px;
+  background-color: #283c63;
 }
 
 h2 {
-    font-family: 'Lato', sans-serif;
-    font-size: 60px;
-    margin: 0px;
-    padding:10px;
-   
+  font-family: "Lato", sans-serif;
+  font-size: 60px;
+  margin: 0px;
+  padding: 10px;
 }
 
 .personalImages {
-    margin:10px;
-    display: flex;
-    justify-content: center;
-    
-
+  margin: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .welcomeContent {
-    padding-left: 10px;
+  padding-left: 10px;
+  font-family: "Lato", sans-serif;
 }
 
 .avatar {
-    border-radius: 50px;
-    height: 70px;
-    width: 70px;
-    display: inline-block;
-    margin:15px;
+  border-radius: 50px;
+  height: 70px;
+  width: 70px;
+  display: inline-block;
+  margin: 15px;
 }
 
 .getStarted {
-    padding:15px;
-    border-radius: 10px;
-    margin:50px;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 50px;
 }
 
-.custom-select{
-    margin-right: 20px;
-   
-  
+.custom-select {
+  margin-right: 20px;
 }
 
 .fixed-bottom {
-    margin-top: 10px;
+  margin-top: 10px;
 }
-
-/* #slider {
-    width: 70%;
-    margin: auto;
-} */
-
-
-
-/* @media only screen and (min-width: 768px and up){
-.image1 {background-image: url(./assets/jeff-sheldon-6MT4_Ut8a3Y-unsplash.jpg);
-        background-size: cover;
-    }
-}    */

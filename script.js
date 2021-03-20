@@ -24,6 +24,11 @@ $(document).ready(function () {
         console.log(dietaryRes);
         window.localStorage.setItem("Ingredients", ingredientsArr);
 
+
+        $(".cardCol")[0].style.display = "block";
+        $(".cardCol")[1].style.display = "block";
+        $(".cardCol")[2].style.display = "block";
+
         sendApiRequest(ingredientsArr, dietaryRes);
         getWine(ingredientsArr)
     });
@@ -41,6 +46,16 @@ $(document).ready(function () {
 
         let data = await response.json();
         console.log(data);
+
+
+        if (data["count"]>0) {
+            cardPop(data);
+        } else {
+            $(".cardCol")[0].style.display = "none";
+            $(".cardCol")[1].style.display = "none";
+            $(".cardCol")[2].style.display = "none";
+            $(".noRes")[0].style.display = "block";
+        }
 
         function cardPop(ingData) {
             console.log(ingData);

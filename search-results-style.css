@@ -11,6 +11,8 @@ header h1 p {
   font-family: "Lato", sans-serif;
   font-size: 16px;
 }
+
+/* BACKGROUND IMAGE ON PAGE */
 /* https://unsplash.com/photos/gwT4rs_xlUA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink */
 .headerImage {
   background: url("assets/vince-lee-gwT4rs_xlUA-unsplash.jpg");
@@ -23,6 +25,7 @@ header h1 p {
   padding: 1rem;
 }
 
+/* FORMATTING FOR THE SEARCH SELECTIONS SO THE WIDTHS DON'T EXCEED THE COLUMN */
 .searchCol {
   padding-left: 15px;
   padding-right: 15px;
@@ -34,6 +37,7 @@ header h1 p {
   line-height: 1.6;
 }
 
+/* FORMATTING FOR THE GO BACK AND VIEW RECIPE BUTTONS */
 .resultsPageBtns {
   display: flex;
   justify-content: space-evenly;

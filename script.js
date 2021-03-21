@@ -112,7 +112,19 @@ $(document).ready(function () {
       </div>
    </div>
    `;
+   if (!ingredient1) {
+    document.querySelector("#wine-box").innerHTML = `
+    <div class="card-body wine-body">
+    <h5 class="wine-hding card-title" id="wine-hding">Drink Up!</h5>
+    <h5 class="card-text wine-title" id="wineTitle">You didn't enter any food...maybe you want to drink! Try some of these drink recipes!</h5>
+  </div>
+</div> 
+`;
+  } else {
+    useWineData(wData);
   }
+}
+  
 
   //second function-working on diet res
 
@@ -153,28 +165,28 @@ $(document).ready(function () {
   }
 
   //SECOND API CALL TO GET WINE PAIRINGS BASED OFF USER INGREDIENTS INPUT
-  async function getWine() {
-    let ingredient1 = $("#searchItem1").val();
-    let API_KEY = "aba6772464154899a2eec582fbee5c92";
-    let response = await fetch(
-      `https://api.spoonacular.com/food/wine/pairing?food=` +
-        ingredient1 +
-        `&apiKey=${API_KEY}`
-    );
-    console.log(response);
-    let wData = await response.json();
-    console.log(wData);
-    useWineData(wData);
-  }
+//   async function getWine() {
+//     let ingredient1 = $("#searchItem1").val();
+//     let API_KEY = "aba6772464154899a2eec582fbee5c92";
+//     let response = await fetch(
+//       `https://api.spoonacular.com/food/wine/pairing?food=` +
+//         ingredient1 +
+//         `&apiKey=${API_KEY}`
+//     );
+//     console.log(response);
+//     let wData = await response.json();
+//     console.log(wData);
+//     useWineData(wData);
+//   }
 
-  function useWineData(wData) {
-    document.querySelector("#wine-box").innerHTML = `
-        <div class="wine-body">
-        <h5 class="wine-hding" id="wine-hding">Drink Up!</h5>
-        <h5 class="wine-title" id="wineTitle">${wData.pairedWines}</h5>
-        <p class="wine-text" id="wineInfo">${wData.pairingText}</p>
-      </div>
-   </div>
-   `;
-  }
+//   function useWineData(wData) {
+//     document.querySelector("#wine-box").innerHTML = `
+//         <div class="wine-body">
+//         <h5 class="wine-hding" id="wine-hding">Drink Up!</h5>
+//         <h5 class="wine-title" id="wineTitle">${wData.pairedWines}</h5>
+//         <p class="wine-text" id="wineInfo">${wData.pairingText}</p>
+//       </div>
+//    </div>
+//    `;
+//   }
 });

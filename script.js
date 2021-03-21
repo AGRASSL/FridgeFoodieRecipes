@@ -90,29 +90,34 @@ $(document).ready(function () {
   
     //SECOND API CALL TO GET WINE PAIRINGS BASED OFF USER INGREDIENTS INPUT
     async function getWine() {
-      let ingredient1 = $("#searchItem1").val();
-      let API_KEY = "aba6772464154899a2eec582fbee5c92";
-      let response = await fetch(
-        `https://api.spoonacular.com/food/wine/pairing?food=` +
-          ingredient1 +
-          `&apiKey=${API_KEY}`
-      );
-      console.log(response);
-      let wData = await response.json();
-      console.log(wData);
-      useWineData(wData);
-    }
+        let ingredient1 = $("#searchItem1").val();
+        if(!ingredient1){
+          //display error message code here
+          return false
+        }
   
-    function useWineData(wData) {
-      document.querySelector("#wine-box").innerHTML = `
-          <div class="card-body wine-body">
-          <h5 class="wine-hding card-title" id="wine-hding">Drink Up!</h5>
-          <h5 class="card-text wine-title" id="wineTitle">${wData.pairedWines}</h5>
-          <p class="card-text wine-text" id="wineInfo">${wData.pairingText}</p>
-        </div>
-     </div>
-     `;
-    }
+        //ingredient1 defined: proceed to fetch.
+        let API_KEY = "aba6772464154899a2eec582fbee5c92";
+        let response = await fetch(
+          `https://api.spoonacular.com/food/wine/pairing?food=` +
+            ingredient1 +
+            `&apiKey=${API_KEY}`
+        );
+        console.log(response);
+        let wData = await response.json();
+        console.log(wData);
+        // useWineData(wData)
+  
+        //update HTML with data from spoonacular!
+        document.querySelector("#wine-box").innerHTML = `
+                <div class="wine-body">
+                <h5 class="wine-hding" id="wine-hding">Drink Up!</h5>
+                <h5 class="wine-title" id="wineTitle">${wData.pairedWines}</h5>
+                <p class="wine-text" id="wineInfo">${wData.pairingText}</p>
+              </div>
+          </div>
+          `;
+      }
   
     //second function-working on diet res
   
@@ -152,29 +157,4 @@ $(document).ready(function () {
       cardPop(data);
     }
   
-    //SECOND API CALL TO GET WINE PAIRINGS BASED OFF USER INGREDIENTS INPUT
-    async function getWine() {
-      let ingredient1 = $("#searchItem1").val();
-      let API_KEY = "aba6772464154899a2eec582fbee5c92";
-      let response = await fetch(
-        `https://api.spoonacular.com/food/wine/pairing?food=` +
-          ingredient1 +
-          `&apiKey=${API_KEY}`
-      );
-      console.log(response);
-      let wData = await response.json();
-      console.log(wData);
-      useWineData(wData);
-    }
-  
-    function useWineData(wData) {
-      document.querySelector("#wine-box").innerHTML = `
-          <div class="wine-body">
-          <h5 class="wine-hding" id="wine-hding">Drink Up!</h5>
-          <h5 class="wine-title" id="wineTitle">${wData.pairedWines}</h5>
-          <p class="wine-text" id="wineInfo">${wData.pairingText}</p>
-        </div>
-     </div>
-     `;
-    }
   });

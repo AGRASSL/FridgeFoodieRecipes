@@ -32,8 +32,8 @@ $(document).ready(function () {
       let oldDiet = JSON.parse(window.localStorage.getItem(dietResArr)) || [];
       oldIngred.push(ingredStorageArr);
       oldDiet.push(dietResArr);
-      console.log(ingredientsArr);
-      console.log(dietaryRes);
+    //   console.log(ingredientsArr);
+    //   console.log(dietaryRes);
       window.localStorage.setItem("userIngred", JSON.stringify(ingredStorageArr));
       window.localStorage.setItem("userDietRes", JSON.stringify(dietResArr));
   
@@ -62,7 +62,7 @@ $(document).ready(function () {
       );
   
       let data = await response.json();
-      console.log(data);
+    //   console.log(data);
       //HIDE ALL CARDS IF NO RECIPES ARE RETURNED BY API, DISPLAY 'NO RESULTS'
       if (data["count"] > 0) {
         cardPop(data);
@@ -74,7 +74,7 @@ $(document).ready(function () {
       }
       //POPULATES CARDS WITH RECIPE INFORMATION
       function cardPop(ingData) {
-        console.log(ingData);
+        // console.log(ingData);
   
         for (var i = 1; i < 10; i++) {
           $("#cardTitle" + i).text(ingData["hits"][i]["recipe"]["label"]);
@@ -103,9 +103,9 @@ $(document).ready(function () {
             ingredient1 +
             `&apiKey=${API_KEY}`
         );
-        console.log(response);
+        // console.log(response);
         let wData = await response.json();
-        console.log(wData);
+        // console.log(wData);
         // useWineData(wData)
   
         //update HTML with data from spoonacular!
@@ -131,7 +131,7 @@ $(document).ready(function () {
       );
   
       let data = await response.json();
-      console.log(data);
+    //   console.log(data);
       //HIDE ALL CARDS IF NO RECIPES ARE RETURNED BY API, DISPLAY 'NO RESULTS'
       if (data["count"] > 0) {
         cardPop(data);
@@ -143,7 +143,7 @@ $(document).ready(function () {
       }
       //POPULATES CARDS WITH RECIPE INFORMATION
       function cardPop(ingData) {
-        console.log(ingData);
+        // console.log(ingData);
   
         for (var i = 1; i < 10; i++) {
           $("#cardTitle" + i).text(ingData["hits"][i]["recipe"]["label"]);
